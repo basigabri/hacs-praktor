@@ -1,0 +1,43 @@
+ask:
+  name: Ask Praktor
+  description: Send a message to a Praktor agent and return its reply.
+  fields:
+    message:
+      name: Message
+      description: The message to send to the agent.
+      required: true
+      example: Is the garage door still open?
+      selector:
+        text:
+          multiline: true
+    agent:
+      name: Agent
+      description: >-
+        Name of the Praktor agent to ask. Defaults to the agent configured in
+        the integration options, or Praktor's first allowed agent.
+      required: false
+      example: claude
+      selector:
+        text:
+    timeout:
+      name: Timeout
+      description: >-
+        How long Praktor may wait for the agent to reply, in seconds. Defaults
+        to the timeout configured in the integration options.
+      required: false
+      selector:
+        number:
+          min: 1
+          max: 600
+          step: 1
+          unit_of_measurement: seconds
+          mode: box
+    config_entry_id:
+      name: Praktor instance
+      description: >-
+        The Praktor integration to use. Defaults to the first loaded Praktor
+        integration.
+      required: false
+      selector:
+        config_entry:
+          integration: praktor

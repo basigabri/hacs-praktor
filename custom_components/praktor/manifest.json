@@ -1,0 +1,13 @@
+{
+  "domain": "praktor",
+  "name": "Praktor",
+  "codeowners": ["@basigabri"],
+  "config_flow": true,
+  "dependencies": ["conversation"],
+  "documentation": "https://github.com/basigabri/hacs-praktor",
+  "integration_type": "service",
+  "iot_class": "local_polling",
+  "issue_tracker": "https://github.com/basigabri/hacs-praktor/issues",
+  "requirements": [],
+  "version": "0.1.0"
+}
